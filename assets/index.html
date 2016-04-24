@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta charset="utf8" /> 
+<style type="text/css">
+body {
+    background: #7d7dff;
+    font-size: 32px;
+}
+
+button{
+    width: 20%;
+    height: 15%;
+}
+
+img{
+    width: 30%;
+    height: 25%;
+}
+</style>
+<script>
+
+function playGame() {
+    JavaCode.playGame();
+}
+
+function getHostAddress() {
+    var hostAddress = JavaCode.getHostAddress();
+    if (hostAddress) {
+        return "Host Address: " + hostAddress;
+    } else {
+        return "��������Android Host Address.";
+    }
+}
+
+function updateHostAddress() {
+    document.getElementById("hostAddressDiv").innerText = getHostAddress();
+}
+
+window.onload = function() {
+    updateHostAddress();
+}
+
+</script>
+</head>
+
+<body>
+
+<!--
+<div id="hostAddressDiv"></div>
+<button type="button" id="hostAddress" onclick="updateHostAddress();">Click to input Android Host Address</button>
+-->
+<center><h3 style="margin-bottom:50px;">Mych Game Demo</h3>
+<img src="destiny.jpg"/>
+<!-- <button type="button" id="nameButton" onclick="playGame();" style="background:url(http://c.hiphotos.baidu.com/zhidao/pic/item/37d3d539b6003af3e89e63d2352ac65c1038b658.jpg) no-repeat; border:none;">Start Game 1</button> -->
+<img src="destiny.jpg" onclick="playGame()" style="margin-left: 3%;"/><br>
+<img src="jieba.jpg" onclick="playGame()" style="margin-top: 5%;"/>
+<img src="gamecenter.jpg" onclick="playGame()" style="margin-left: 3%;"/>
+<!--
+<button type="button" id="nameButton" onclick="playGame();" style="margin-left: 5%; background-img=gamecenter.jpg">Start Game 2</button><br>
+<button type="button" id="nameButton" onclick="playGame();" style="margin-top: 5%;">Start Game 3</button>
+<button type="button" id="nameButton" onclick="playGame();" style="margin-left: 5%;">Start Game 4</button> -->
+</center>
+</body>
+
+</html>
